@@ -1,0 +1,125 @@
+/* ============================================
+   NAVIGATION - AuraTex
+   Styles pour la navbar et le logo
+   ============================================ */
+
+/* Navbar */
+.navbar {
+    background: rgba(10, 25, 41, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 25, 41, 0.95);
+    box-shadow: 0 10px 40px rgba(0, 229, 255, 0.2);
+    padding: 0.3rem 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-svg {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.logo-svg:hover {
+    transform: rotate(360deg) scale(1.1);
+    filter: drop-shadow(var(--glow-blue));
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    text-shadow: var(--glow-blue);
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 600;
+    margin: 0 1rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--gradient-2);
+    transition: width 0.3s ease;
+    box-shadow: var(--glow-blue);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--neon-cyan) !important;
+    text-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-2);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 999;
+    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.4);
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 15px 50px rgba(0, 229, 255, 0.6);
+}

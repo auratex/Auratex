@@ -1,0 +1,22 @@
+/* ============================================
+   VARIABLES CSS - AuraTex Theme
+   Toutes les variables de couleurs et styles
+   ============================================ */
+
+:root {
+    /* Couleurs principales */
+    --dark-navy: #0A1929;
+    --navy-blue: #132F4C;
+    --electric-blue: #1E88E5;
+    --bright-blue: #42A5F5;
+    --neon-cyan: #00E5FF;
+    --gold-accent: #FFD700;
+    --text-light: #E3F2FD;
+    
+    /* Dégradés */
+    --gradient-1: linear-gradient(135deg, #0A1929 0%, #1565C0 100%);
+    --gradient-2: linear-gradient(45deg, #1E88E5, #00E5FF);
+    
+    /* Effets */
+    --glow-blue: 0 0 40px rgba(0, 229, 255, 0.6);
+}

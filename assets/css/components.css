@@ -1,0 +1,454 @@
+/* ============================================
+   COMPONENTS - AuraTex
+   Styles pour tous les composants (cards, buttons, forms)
+   ============================================ */
+
+/* Buttons */
+.btn-futuristic {
+    padding: 1.2rem 3rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.btn-futuristic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-futuristic:hover::before {
+    left: 100%;
+}
+
+.btn-primary-glow {
+    background: var(--gradient-2);
+    color: white;
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+}
+
+.btn-primary-glow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 50px rgba(0, 229, 255, 0.8);
+    color: white;
+}
+
+.btn-outline-glow {
+    background: transparent;
+    color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+.btn-outline-glow:hover {
+    background: var(--neon-cyan);
+    color: var(--dark-navy);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 50px rgba(0, 229, 255, 0.6);
+}
+
+/* Stats Cards */
+.stat-card {
+    background: rgba(30, 136, 229, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 229, 255, 0.2);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, var(--neon-cyan), transparent);
+    animation: rotate 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stat-card:hover::before {
+    opacity: 0.3;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+.stat-card::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--dark-navy);
+    border-radius: 18px;
+    z-index: 0;
+}
+
+.stat-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.stat-card:hover {
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 0 20px 60px rgba(0, 229, 255, 0.4);
+    border-color: var(--neon-cyan);
+}
+
+.stat-number {
+    font-size: 4rem;
+    font-weight: 900;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Info Box */
+.info-box {
+    background: rgba(19, 47, 76, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.info-box:hover::before {
+    left: 100%;
+}
+
+.info-box:hover {
+    transform: translateX(15px);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 10px 40px rgba(0, 229, 255, 0.3);
+}
+
+.info-box i {
+    font-size: 3rem;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+}
+
+.info-box h4 {
+    color: var(--bright-blue);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.info-box p {
+    color: rgba(227, 242, 253, 0.8);
+    line-height: 1.8;
+}
+
+/* Service Cards */
+.service-card {
+    background: rgba(19, 47, 76, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    transition: all 0.5s ease;
+    border: 2px solid rgba(0, 229, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(0, 229, 255, 0.5);
+    border-color: var(--neon-cyan);
+}
+
+.service-icon {
+    font-size: 4.5rem;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.service-card h3 {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.service-card:hover h3 {
+    color: var(--neon-cyan);
+}
+
+.service-card p {
+    color: rgba(227, 242, 253, 0.8);
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+/* Project Cards */
+.project-card {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    transition: all 0.5s ease;
+    border: 2px solid rgba(0, 229, 255, 0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(0, 229, 255, 0.5);
+    border-color: var(--neon-cyan);
+}
+
+.project-image {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(135deg, #0A1929, #1E88E5, #00E5FF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0, 229, 255, 0.1) 10px,
+        rgba(0, 229, 255, 0.1) 20px
+    );
+    animation: moveStripes 20s linear infinite;
+}
+
+@keyframes moveStripes {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.project-image i {
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.4);
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.project-card:hover .project-image i {
+    transform: scale(1.3) rotate(15deg);
+    filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.8));
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.9), rgba(30, 136, 229, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h4 {
+    font-size: 2rem;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-info {
+    padding: 2.5rem;
+    background: rgba(19, 47, 76, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.project-info h4 {
+    color: var(--bright-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.project-category {
+    color: var(--neon-cyan);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.project-info p {
+    color: rgba(227, 242, 253, 0.9);
+    line-height: 1.8;
+}
+
+/* Contact Form */
+.contact-form {
+    background: rgba(19, 47, 76, 0.4);
+    backdrop-filter: blur(20px);
+    padding: 4rem;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 30px 80px rgba(0, 229, 255, 0.3);
+}
+
+.form-control {
+    background: rgba(10, 25, 41, 0.6);
+    border: 2px solid rgba(0, 229, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(227, 242, 253, 0.5);
+}
+
+.form-control:focus {
+    background: rgba(10, 25, 41, 0.8);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+    outline: none;
+    color: white;
+}
+
+textarea.form-control {
+    min-height: 180px;
+    resize: none;
+}
+
+/* Contact Info */
+.contact-info {
+    background: rgba(19, 47, 76, 0.4);
+    backdrop-filter: blur(20px);
+    padding: 3rem;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 229, 255, 0.3);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    transition: all 0.3s ease;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.contact-item:hover {
+    background: rgba(0, 229, 255, 0.1);
+    transform: translateX(10px);
+}
+
+.contact-item i {
+    font-size: 2.5rem;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-right: 1.5rem;
+    width: 60px;
+    text-align: center;
+}
+
+.contact-item h5 {
+    color: var(--bright-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.contact-item p {
+    color: rgba(227, 242, 253, 0.9);
+    margin: 0;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    padding: 1.3rem 2.5rem;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E, #25D366);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 60px rgba(37, 211, 102, 0.6);
+    color: white;
+}
