@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="assets/css/sections.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <link rel="stylesheet" href="assets/css/contact-options.css">
 </head>
 <body>
 
@@ -478,7 +480,9 @@
     </section> -->
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+<!--     <section id="contact" class="section contact-section">
+
+
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
                 <h2 class="section-title">Contactez-Nous</h2>
@@ -570,9 +574,168 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!-- Footer -->
+    <!-- Contact Section - Improved Version -->
+<section id="contact" class="section contact-section">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <p class="section-subtitle mx-auto">Choisissez votre moyen de contact préféré - Nous sommes disponibles sur toutes les plateformes !</p>
+        </div>
+
+        <!-- Social Media Contact Options - Prominent Display -->
+        <div class="row mb-5" data-aos="fade-up">
+            <div class="col-12">
+                <div class="contact-options-card">
+                    <h3 class="text-center mb-4" style="color: var(--bright-blue);">
+                        <i class="fas fa-comments me-2"></i>Contactez-nous via vos plateformes préférées
+                    </h3>
+                    <div class="row g-3">
+                        <!-- WhatsApp -->
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <a href="https://wa.me/212600000000?text=Bonjour%20AuraTex,%20je%20souhaiterais%20discuter%20d'un%20projet" 
+                               class="contact-option-btn whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+
+                        <!-- Gmail -->
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <a href="#" id="gmailContactBtn" class="contact-option-btn gmail">
+                                <i class="fas fa-envelope"></i>
+                                <span>Gmail</span>
+                            </a>
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <a href="https://web.facebook.com/people/AuraTex/61587432719186/" 
+                               class="contact-option-btn facebook" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <a href="https://www.instagram.com/auratex.services" 
+                               class="contact-option-btn instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+
+                        <!-- TikTok -->
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <a href="https://www.tiktok.com/@auratexservices" 
+                               class="contact-option-btn tiktok" target="_blank">
+                                <i class="fab fa-tiktok"></i>
+                                <span>TikTok</span>
+                            </a>
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div class="col-lg-2 col-md-4 col-6">
+                            <a href="https://www.linkedin.com/company/auratexservices/" 
+                               class="contact-option-btn linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form and Info -->
+        <div class="row">
+            <!-- Gmail Contact Form -->
+            <div class="col-lg-7 mb-4" data-aos="fade-right">
+                <div class="contact-form">
+                    <h4 class="mb-4" style="color: var(--bright-blue);">
+                        <i class="fas fa-envelope me-2"></i>Envoyez-nous un Email
+                    </h4>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="email" class="form-label">Votre Email *</label>
+                                <input type="email" class="form-control" id="email" 
+                                       placeholder="votre.email@example.com" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label for="objet" class="form-label">Objet *</label>
+                                <input type="text" class="form-control" id="objet" 
+                                       placeholder="Ex: Demande de devis pour site e-commerce" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Votre Message *</label>
+                            <textarea class="form-control" id="message" rows="6"
+                                      placeholder="Décrivez votre projet ou vos besoins en détail..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-futuristic btn-primary-glow w-100">
+                            <i class="fas fa-paper-plane me-2"></i> Ouvrir Gmail
+                        </button>
+                        <p class="text-center mt-3" style="color: var(--light-gray); font-size: 0.9rem;">
+                            <i class="fas fa-info-circle me-1"></i>
+                            Le bouton ouvrira Gmail avec votre message pré-rempli
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-5 mb-4" data-aos="fade-left">
+                <div class="contact-info">
+                    <h4 class="mb-4" style="color: var(--bright-blue);">
+                        <i class="fas fa-info-circle me-2"></i>Nos Coordonnées
+                    </h4>
+
+                    <div class="contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <h5>Adresse</h5>
+                            <p>Casablanca, Maroc</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h5>Téléphone</h5>
+                            <p>+212 6XX XXX XXX<br>+212 5XX XXX XXX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h5>Email</h5>
+                            <p>auratex.services@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box mt-4">
+                        <h5 class="mb-3"><i class="fas fa-clock me-2"></i>Horaires d'Ouverture</h5>
+                        <p class="mb-1"><strong>Lun - Ven:</strong> 9h00 - 18h00</p>
+                        <p class="mb-1"><strong>Samedi:</strong> 10h00 - 14h00</p>
+                        <p class="mb-0"><strong>Dimanche:</strong> Fermé</p>
+                        <p class="mt-2" style="color: var(--neon-cyan);">
+                            <i class="fas fa-bolt me-1"></i>Support disponible pour projets urgents
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -581,11 +744,10 @@
                     <p>Votre partenaire de confiance pour tous vos projets digitaux. 
                     Créons ensemble les solutions qui propulsent votre entreprise vers le succès.</p>
                     <div class="social-links mt-4">
-                        <a href="https://web.facebook.com/people/AuraTex/61587432719186/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@auratexservices"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://www.linkedin.com/company/auratexservices/"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/auratex.services"><i class="fab fa-instagram"></i></a>
-                        <!-- <a href="#"><i class="fab fa-github"></i></a> -->
+                        <a href="https://web.facebook.com/people/AuraTex/61587432719186/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@auratexservices" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/company/auratexservices/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/auratex.services" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
@@ -601,14 +763,27 @@
                 </div>
 
                 <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <h5 class="mb-3" style="color: var(--bright-blue); font-size: 1.3rem;">Restez Informé</h5>
-                    <p>Recevez nos actualités et conseils pour digitaliser votre entreprise.</p>
-                    <div class="input-group mt-3">
-                        <input type="email" class="form-control" placeholder="votre@email.com" style="background: rgba(10,25,41,0.6); border-color: var(--neon-cyan); color: white;">
-                        <button class="btn btn-primary-glow" type="button">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
+                    <h5 class="mb-3" style="color: var(--bright-blue); font-size: 1.3rem;">Contactez-Nous</h5>
+                    <p class="mb-3">Prêt à digitaliser votre entreprise ? Parlons de votre projet !</p>
+                    
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item mb-3">
+                            <i class="fas fa-phone me-2" style="color: var(--neon-cyan);"></i>
+                            <span>+212 6XX XXX XXX</span>
+                        </div>
+                        <div class="footer-contact-item mb-3">
+                            <i class="fas fa-envelope me-2" style="color: var(--neon-cyan);"></i>
+                            <span>auratex.services@gmail.com</span>
+                        </div>
+                        <div class="footer-contact-item mb-3">
+                            <i class="fas fa-location-dot me-2" style="color: var(--neon-cyan);"></i>
+                            <span>Casablanca, Maroc</span>
+                        </div>
                     </div>
+
+                    <a href="#contact" class="btn btn-futuristic btn-outline-glow btn-sm mt-2">
+                        <i class="fas fa-comments me-2"></i>Démarrer une Discussion
+                    </a>
                 </div>
             </div>
 
